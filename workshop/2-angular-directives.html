@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Taste of Angular - Built in Directives</title>
+  <!-- a dash of bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!-- and a spoonfull of angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+<!-- the ng-app directive tells agular that this element contains angular code-->
+<body ng-app>
+  <!-- the ng-init directive creates a variable in the current scope -->
+  <div ng-init="beatles=['John', 'Paul', 'George', 'Ringo', false]" class="container">
+
+    <h1>Names of The Beatles</h1>
+
+    <ul class="list-group">
+      <!-- the ng-repeat directive loops over a collection, using an element as a template -->
+      <li ng-repeat="name in beatles" class="list-group-item">
+        <h3>
+          {{ name }}
+
+          <!-- the ng-show directive hides/shows an element based on truthiness of an expression -->
+          <span ng-show="name=='Ringo'" class="glyphicon glyphicon-star"></span>
+          <!-- the ng-if directive adds/removes an element based on truthiness of an expression -->
+          <span ng-if="name=='John'" class="glyphicon glyphicon-heart" ></span>
+        </h3>
+      </li>
+    </ul>
+
+  </div>
+
+</body>
+</html>

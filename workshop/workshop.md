@@ -115,6 +115,43 @@ Here's the important code:
 
 Directives give angular it's expressive power - they give you a way to author new HTML elements and enhance others.
 
+## Built in Directives
+
+Angular has a large library of built-in directives to handle most of your single page application needs right out of the box
+
+### Example
+
+Open [2-angular-directives.html](http://apprend.github.io/tasteofAngular/workshop/2-angular-directives.html) in your code editor *and* web browser
+
+### ng-init
+
+`ng-init` is a way of creating variables right in your view. It takes an "angular expression", which for most purposes looks just like regular JavaScript with. A few bits are missing, like the `var` and `;` you'd normally write).
+
+```html
+<!-- the ng-init directive creates a variable in the current scope -->
+<div ng-init="beatles=['John', 'Paul', 'George', 'Ringo']" class="container">
+```
+
+### ng-repeat
+
+`ng-repeat` let's you execute a `for/in` loop in your view, using the HTML element that you declare it on as a template. This `ng-repeat` will create 4 `<li>` elements because `beatles` was created as an array with 4 items in our `ng-init` directive
+
+```html
+<!-- the ng-repeat directive loops over a collection, using an element as a template -->
+<li ng-repeat="name in beatles" class="list-group-item">
+```
+
+### ng-show
+
+`ng-show` evaluates an angular expression, and adds the class `ng-hide` to the element it is attached to if it's expression is falsey (false, undefined, null, NaN etc.). This means the element is still on the page, but has it's css to set to `display: none`. 
+
+This particular code will only be visible when `name` is equal to `Ringo`, the last element in our `ng-init` array.
+
+```html
+<!-- the ng-show directive hides/shows an element based on truthiness of an expression -->
+<span ng-show="name=='Ringo'" class="glyphicon glyphicon-star"></span>
+```
+
 ### Hide/Show
 
 ### Repetition

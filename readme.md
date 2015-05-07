@@ -14,15 +14,3 @@ $ rackup
 You should now be able to visit `http://localhost:9292` and view the course.
 
 > Make sure you have ruby installed on your system. If you see an error like "-bash: rackup: command not found", then install the ruby rack server with `gem install rack` and try again.
-
-
-1. getting-started.html
-2. basic-data-binding.html
-3. ng-repeat.html
-4. filters.html
-5. viewsAndControllers.html
-6. ModulesRoutesFactories/modules.html
-
-
-
-Here's some more non-code text

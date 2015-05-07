@@ -30,6 +30,7 @@ Go further by building interactivity into your websites
   * Environment setup
   * Getting Started
   * Two-way data binding
+  * Filters
   * Doing real work - Directives
   * Controllers
   * doing more...
